@@ -1,0 +1,102 @@
+The below there are 3 files put them ina foler named UTILS
+#App colors file .
+import 'package:flutter/material.dart';
+
+/// Custom class for storing app colors
+class AppColors {
+  AppColors._();
+
+  static Color appPrimaryColor = Color(0xffff6f00);
+  static Color appLightCardColor = Color.fromARGB(255, 241, 241, 241);
+  static Color appDarkCardColor = Color.fromARGB(255, 24, 24, 24);
+}
+
+
+
+#App Strings file
+/// Custom class for storing app strings
+class AppStrings {
+  AppStrings._();
+
+  static String profileImageUrl = 'images/RES PIIC.jpg';
+  static String secondScreenBio = '🚀 BIO';
+  static String secondScreenHobbies = '💆🏻 HOBBIES';
+  static String secondScreenContact = '📞 CONTACT';
+}
+
+#App theme file.
+import 'package:flutter/material.dart';
+import 'package:resume/utils/app_colors.dart';
+import 'package:google_fonts/google_fonts.dart';
+/// Application Theme
+class AppTheme {
+  AppTheme._();
+  /// App Light Theme
+  static ThemeData lightTheme = ThemeData(
+    scaffoldBackgroundColor: Colors.white,
+    canvasColor: Colors.black,
+    cardColor: AppColors.appLightCardColor,
+    textTheme: TextTheme(
+      displayLarge: GoogleFonts.aBeeZee(
+        fontSize: 35,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+      displayMedium: GoogleFonts.aBeeZee(
+        fontSize: 18,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+      displaySmall: GoogleFonts.aBeeZee(
+        fontSize: 26,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+      bodyLarge: GoogleFonts.aBeeZee(
+        fontSize: 45,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+      bodyMedium: GoogleFonts.aBeeZee(
+        fontSize: 15,
+        fontWeight: FontWeight.bold,
+        color: Colors.grey.shade600,
+      ),
+    ),
+  );
+  /// App Dark Theme
+  static ThemeData darkTheme = ThemeData(
+    canvasColor: Colors.white,
+    scaffoldBackgroundColor: Colors.black,
+    cardColor: AppColors.appDarkCardColor,
+    textTheme: TextTheme(
+      displayLarge: GoogleFonts.aBeeZee(
+        fontSize: 35,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+      ),
+      displayMedium: GoogleFonts.aBeeZee(
+        fontSize: 18,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+      ),
+      displaySmall: GoogleFonts.aBeeZee(
+        fontSize: 26,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+      ),
+      bodyLarge: GoogleFonts.aBeeZee(
+        fontSize: 45,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+      ),
+      bodyMedium: GoogleFonts.aBeeZee(
+        fontSize: 15,
+        fontWeight: FontWeight.bold,
+        color: Colors.grey.shade400,
+      ),
+    ),
+  );
+}
+
+
